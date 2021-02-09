@@ -12,14 +12,10 @@
 // Estilos
 // =============================================================================
 .header {
-    border: 1px solid red;
-
     width: 100%;
     padding-top: 16px;
 
     &__navbar {
-        border: 1px solid red;
-
         max-width: 1220px;
         margin: 0 auto;
         padding: 0px 16px;
@@ -35,6 +31,10 @@
 
         &-list {
             display: flex;
+
+            @include responsive() {
+                display: none;
+            }
         }
 
         &-item {
@@ -100,6 +100,22 @@
                         transform: translate3d(0, -3px, 0);
                     }
                 }
+            }
+
+            @include responsive() {
+                display: none;
+            }
+        }
+
+        &-bx {
+            display: none;
+
+            @include responsive() {
+                display: block;
+                width: 48px;
+                height: 48px;
+                background: $white;
+                border-radius: 8px;
             }
         }
     }

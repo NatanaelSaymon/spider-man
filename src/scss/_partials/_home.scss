@@ -11,14 +11,12 @@
 // =============================================================================
 // Estilos
 // =============================================================================
-.main {
-    border: 1px solid red;
 
+.main {
     max-width: 1220px;
     margin: 0 auto;
     padding: 36px 16px;
-
-    // overflow: hidden;
+    height: calc(100vh - 95px);
 
     &-container {
         display: flex;
@@ -26,22 +24,34 @@
         flex-direction: row;
 
         &__item {
-            border: 1px solid red;
 
             max-width: 576px;
 
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+
+            &-logos {
+                display: flex;
+            }
         }
 
         &__item-destaque {
-            border: 1px solid red;
 
             &-img {
                 max-width: 130%;
                 transform: translate3d(-120px, 0, 0);
+
+                @include responsive() {
+                    max-width: 100%;
+                    transform: translate3d(0, 0, 0);
+                }
             }
+        }
+
+        @include responsive() {
+            flex-direction: column;
+            height: auto;
         }
     }
 }
