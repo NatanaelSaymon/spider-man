@@ -11,7 +11,40 @@
 // =============================================================================
 // Estilos
 // =============================================================================
+.main {
+    border: 1px solid red;
 
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 36px 16px;
+
+    // overflow: hidden;
+
+    &-container {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+
+        &__item {
+            border: 1px solid red;
+
+            max-width: 576px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &__item-destaque {
+            border: 1px solid red;
+
+            &-img {
+                max-width: 130%;
+                transform: translate3d(-120px, 0, 0);
+            }
+        }
+    }
+}
 // =============================================================================
 // Media Queries
 // =============================================================================

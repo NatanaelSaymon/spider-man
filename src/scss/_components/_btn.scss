@@ -1,0 +1,108 @@
+// # Home
+
+// =============================================================================
+// Variaveis
+// =============================================================================
+
+// =============================================================================
+// Placeholders
+// =============================================================================
+
+// =============================================================================
+// Estilos
+// =============================================================================
+
+.btn {
+    display: inline-block;
+    padding: 12px 36px;
+    border-radius: 3px;
+    transform: skewX(-10deg);
+    text-transform: uppercase;
+    background: transparent;
+    position: relative;
+    transition: .7s ease;
+}
+
+
+.btn-primary {
+    background: linear-gradient(225deg, #EA1D22 0%, #B31317 100%);
+
+    &::after {
+        content: "";
+        display: block;
+        width: 20%;
+        height: 70%;
+
+        border-radius: 3px;
+        border-top: 3px solid #fff;
+        border-left: 3px solid #fff;
+
+        position: absolute;
+        top: -2px;
+        left: -2px;
+
+        opacity: 0;
+        transition: .7s ease;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        width: 20%;
+        height: 70%;
+
+        border-radius: 3px;
+        border-right: 3px solid #fff;
+        border-bottom: 3px solid #fff;
+
+        position: absolute;
+        bottom: -2px;
+        right: -2px;
+
+        opacity: 0;
+        transition: .7s ease;
+    }
+
+    &:hover {
+        transform: skewX(-10deg) scale(1.05);
+        &::after,
+        &::before {
+            opacity: 1;
+        }
+    }
+}
+
+.btn-secondary {
+    padding: 10px 32px;
+    border: 2px solid $red;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 0%;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        background: linear-gradient(225deg, #EA1D22 0%, #B31317 100%);
+        transition: .7s ease;
+        z-index: -1;
+    }
+
+    &:hover {
+        &::after {
+            width: 100%;
+        }
+    }
+}
+
+// =============================================================================
+// Media Queries
+// =============================================================================
+
+// =============================================================================
+// Imports
+// =============================================================================
+
