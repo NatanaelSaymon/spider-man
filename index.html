@@ -104,11 +104,23 @@
                         <img src="./src/img/svg/icon-marvel.svg" alt="">
                     </div>
                 </div>
-                <div class="main-container__item-destaque">
+                <div class="main-container__item-destaque js-tilt">
                     <img src="./src/img/png/spider-man.png" class="main-container__item-destaque-img" alt="">
                 </div>
             </section>
         </main>
+
+        <!--=========== SCRIPTS ===========-->
+        <script src="./src/js/app.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+
+        <script>
+            $('.js-tilt').tilt({
+                perspective: 2000,
+                scale: 1.05
+            });
+        </script>
     </body>
 
 </html>
