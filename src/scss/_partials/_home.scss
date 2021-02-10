@@ -39,7 +39,7 @@
         &__item-destaque {
 
             &-img {
-                max-width: 130%;
+                max-width: 125%;
                 transform: translate3d(-140px, 0, 0);
 
                 @include responsive() {
