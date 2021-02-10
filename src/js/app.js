@@ -26,6 +26,14 @@ document.addEventListener("DOMContentLoaded", () => {
     )
 
     .fromTo(
+        '.js-navbar-mobile', // target
+        0.7 , // Tempo de transicao
+        { y: -50, opacity: 0 }, // from
+        { y: 0, opacity: 1, ease: Expo.easeInOut}, // to
+        '-=0.5' // Adiantamento para comecar antes do tempo de transicao
+    )
+
+    .fromTo(
         '.js-navbar-list', // target
         0.7 , // Tempo de transicao
         { y: -50, opacity: 0 }, // from
