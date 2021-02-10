@@ -15,8 +15,8 @@
 .main {
     max-width: 1220px;
     margin: 0 auto;
-    padding: 36px 16px;
-    height: 90vh;
+    padding: 0px 16px;
+    height: calc(100vh - 93px);
 
     &-container {
         display: flex;
@@ -43,8 +43,7 @@
                 transform: translate3d(-140px, 0, 0);
 
                 @include responsive() {
-                    max-width: 100%;
-                    transform: translate3d(0, 0, 0);
+                    display: none;
                 }
             }
         }
