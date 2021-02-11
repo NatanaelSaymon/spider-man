@@ -108,14 +108,18 @@
         }
 
         &-mobile{
-            display: flex; 
-            align-items: center;
+            display: none;
+
+            @include responsive() {
+                display: flex; 
+                align-items: center;
+            }
 
             &-input {
                 display: none;
             }
 
-            &-line {
+            &-icons {
                 display: none;
                 position: relative;
     
@@ -158,13 +162,13 @@
                 }
             }
 
-            #hamburguer:checked ~ label .header__navbar-mobile-line::after {
+            #hamburguer:checked ~ label .header__navbar-mobile-icons::after {
                 transform: rotate(225deg);
                 top: 45%;
                 left: 10%;
             }
 
-            #hamburguer:checked ~ label .header__navbar-mobile-line::before {
+            #hamburguer:checked ~ label .header__navbar-mobile-icons::before {
                 transform: rotate(-225deg);
 
                 width: 80%;
