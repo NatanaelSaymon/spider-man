@@ -107,15 +107,71 @@
             }
         }
 
-        &-mobile {
-            display: none;
+        &-mobile{
+            display: flex; 
+            align-items: center;
 
-            @include responsive() {
-                display: block;
-                width: 48px;
-                height: 48px;
-                background: $white;
-                border-radius: 8px;
+            &-input {
+                display: none;
+            }
+
+            &-line {
+                display: none;
+                position: relative;
+    
+                @include responsive() {
+                    display: block;
+                    width: 48px;
+                    height: 48px;
+                    
+                    border-radius: 8px;
+                    cursor: pointer;
+    
+                    &::after {
+                        content: "";
+                        width: 80%;
+                        height: 10%;
+
+                        background: $white;
+                        border-radius: 20px;
+    
+                        position: absolute;
+                        top: 30%;
+                        left: 10%;
+
+                        transition: 1s ease;
+                    }
+    
+                    &::before {
+                        content: "";
+                        width: 50%;
+                        height: 10%;
+                        background: $white;
+                        border-radius: 20px;
+    
+                        position: absolute;
+                        top: 60%;
+                        left: 40%;
+
+                        transition: 1s ease;
+                    }
+                }
+            }
+
+            #hamburguer:checked ~ label .header__navbar-mobile-line::after {
+                transform: rotate(225deg);
+                top: 45%;
+                left: 10%;
+            }
+
+            #hamburguer:checked ~ label .header__navbar-mobile-line::before {
+                transform: rotate(-225deg);
+
+                width: 80%;
+                height: 10%;
+
+                top: 45%;
+                left: 10%;
             }
         }
     }
